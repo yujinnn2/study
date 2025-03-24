@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            position: relative;
+            animation-name:playStop;
+            /*크로스브라우징 맞추기*/
+            -moz-animation-name:playStop;
+            -webkit-animation-name:playStop;
+            -o-animation-name:playStop;
+            -ms-animation-name:playStop;
+            animation-delay: 3s;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes playStop{
+            from{
+                left:0px;
+            }
+            50%{
+                left: 300px;
+            }
+            to{
+                left: 0px;
+            }
+        }
+        @-moz-keyframes playStop{
+            from{
+                left:0px;
+            }
+            50%{
+                left: 300px;
+            }
+            to{
+                left: 0px;
+            }
+        }/*파이어폭스<<모질라*/
+        @-webkit-keyframes playStop{
+            from{
+                left:0px;
+            }
+            50%{
+                left: 300px;
+            }
+            to{
+                left: 0px;
+            }
+        }/*크롬, 사파리*/
+        @-o-keyframes playStop{
+            from{
+                left:0px;
+            }
+            50%{
+                left: 300px;
+            }
+            to{
+                left: 0px;
+            }
+        }/*오페라*/
+    </style>
+</head>
+<body>
+    
+    <div class="content-box">
+        <div class="btn-content">
+            <button class="play">play</button>
+            <button class="stop">stop</button>
+        </div>
+        <div class="ani-content">
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jquery 3.2.1 -->
+
+    <script>
+        $(function(){
+            $('.play').click(function(){
+                $('.box').css('background','black').css('animation-play-state','running')
+            });
+            $('.stop').click(function(){
+                $('.box').css('background','yellow').css('animation-play-state','paused')
+            })
+        })
+    </script>
+</body>
+
+</html>

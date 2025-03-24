@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.f-h100{
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.w-50{
+width: 50%;
+background: yellow;
+height: 100%;
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+.w-100{
+    width: 100%;
+    height: 50vh;
+
+}
+.bg1{
+    background: url('/study/test2/images/img1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg2{
+    background: url('/study/test2/images/img2.jpg');
+    background-size: cover;
+  
+}
+
+@media(max-width:768px){
+    .d-flex{
+        flex-direction: column;
+    }
+    .w-50{
+        width: 100%;
+    }
+}
