@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .box1{
+        width: 30%;
+        height: 300px;
+        background: gold;
+    }
+
+    .box2{
+        width: 40%;
+        height: 300px;
+        background: skyblue;
+    }
+    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 6px;
+    }
+
+    @media(max-width:768px){
+        .mo-50{
+            width: 40%;
+        }
+        .mo-100{
+            width: 90%;
+        }
+    }
+
+
+    @media(max-width:547px){
+        .mo-50{
+            width: 90%;
+        }
+        .mo-100{
+            width: 90%;
+        }
+    }
+
+    h1{
+        position: relative;
+        z-index: 1;
+    }
+
+    h1::after{
+        content: "";
+        /*크기를 만들어주는 애임.없으면 작동 ㄴㄴ */
+        width: 170px;
+        height: 20px;
+        background: blue;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: -1;      
+    }
+
+    .sleep{
+        list-style: none;
+    }
+    
+    .sleep li{
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+    }
+
+    .sleep li:first-child:after{
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 15px;
+        background: #333;
+        top: 0;
+        right: 0;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="content box1 mo-50">
+            <h1>가상선택자</h1>
+            <ul class="sleep">
+                <li>Menu1</li>
+                <li>Menu2</li>
+            </ul>
+        </div>
+        <div class="content box1 mo-50"></div>
+        <div class="content box1 mo-50"></div>
+        <div class="content box2 mo-50"></div>
+        <div class="content box2 mo-100"></div>
+
+    </div>    
+</body>
+</html>
