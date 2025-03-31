@@ -82,7 +82,7 @@ a.active,a:hover{
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a{
+    nav a{
         font-size: 20px;
     }
     a:hover, a.active{
