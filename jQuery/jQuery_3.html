@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>.before() 메소드</h1>
+    <table>
+        <tr id="firstRow">
+            <td>첫 번째 셀이에요!</td>
+            <td>두 번째 셀이에요!</td>
+        </tr>
+    </table>
+    <button>행 추가</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+    </script>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                $("#firstRow").before("<tr><td>이름</td><td>홍길동</td></tr>").before("<tr><td>나이</td><td>99세</td></tr>")
+            })
+        })
+    </script>
+
+</body>
+</html>
