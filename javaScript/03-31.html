@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="demo"></p> 
+<script>
+    //     const scores = [85,92,68,77]
+    //     for(let i = 0; i<scores.length; i++){
+    //         if(scores[i] >= 90){
+    //             document.write(`${score[i]}점 -> A등급`);
+    //         } else if(scores[i] >= 80){
+    //             document.write(`${scores[i]}점 -> B등급`);
+    //         } else if(scores[i] >= 70){
+    //             document.write(`${scores[i]}점 -> C등급`);
+    //         } else{
+    //             document.write(`${score[i]}점 -> F등급`);
+
+    //     }
+    // } -->
+
+    // document.getElementById("demo").innerHTML =
+    // "<p><b>Math.E:</b> " + Math.E + "</p>" + 
+    // "<p><b>Math.PI:</b>" + Math.PI +  "</p>" + 
+    // "<p><b>Math.SQRT2:</b>" + Math.SQRT2 +  "</p>" +
+    // "<p><b>Math.SQRT1_2:</b>" + Math.SQRT1_2 + "</p>" + 
+    // "<p><b>Math.LN2:</b>" + Math.LN2 + "</p>" + 
+    // "<p><b>Math.LN10:</b>" + Math.LN10 + "</p>" +
+    // "<p><b>Math.LOG2E:</b>" + Math.LOG2E + "</p>" +
+    // "<p><b>Math.LOG10E:</b>" + Math.LOG10E + "</p>" ;
+    // //지금부터 시작 
+    // "<p><b>Math.round:</b>" + Math.round(4.5) + "</p>"+
+    // // 정수를 반올림 
+    // "<p><b>Math.ceil:</b>" + Math.ceil(4.4) + "</p>"+
+    // // 가장 가까운 정수를 반올림 
+    // "<p><b>Math.floor:</b>" + Math.floor(-4.4) + "</p>"+
+    // // 소수점 자리 버림 
+    // "<p><b>Math.Pow:</b>" + Math.pow(8,4) + "</p>"+
+    // // 거듭 제곱 
+    // "<p><b>Math.abs:</b>" + Math.abs(-4.2) + "</p>"+
+    // // 절대 값 (양수)
+    // "<p><b>Math.min:</b>" + Math.min(0,150,30,-8) + "</p>"+
+    // // 최소 값 
+    // "<p><b>Math.max:</b>" + Math.max(0,150,30,-8) + "</p>"+
+    // // 최대 값 
+    // "<p><b>Math.random:</b>" + Math.random() + "</p>";
+    // // 0 ~ 1 사이의 난수 (무작위)
+
+
+    // const today = new Date();
+    // // 지금 날짜와 시간이 저장(2025년 3월 31일 2시)
+    // // const targetDate = new Date ('2025-12-25')
+    // const targetDate = new Date (prompt("날짜를 입력해 주세요.."));
+    // // //목표 날짜를 저장해주고, 
+
+    // const diffTime = targetDate - today;
+    // // 목표 날짜에서 오늘날짜 밀리초 단위로 남은 시간 계산 
+
+    // const diffDays = Math.ceil(diffTime/(1000*60*60*24));
+    // // 밀리초를 일(day) 단위로 바꾸는 값
+    // // (100ms*60초*60분*24시간); 269.3일 -> 270일 
+    // document.write(`솔크 남은시간까지 ${diffDays}일 남았습니다.`)
+
+
+    // // 문제 1: 오늘이 주말인지 확인하기
+    // // 난이도 : 
+    // // 요구사항 : 현재 날짜를 기준으로 주말(토요일 또는 일요일)인지 확인하세요. 
+    // // 사용함수 : Date.getDay(), if 
+
+    
+    // const today = new Date();
+    // const day = today.getDay(); // 0(일요일) ~ 6(토요일)
+
+    // if (day === 0 || day ===6){
+    //     console.log("오늘은 주말입니다!");
+    // } else{
+    //     console.log("오늘은 평일입니다.");
+    // }
+    // document.write()
+
+    
+    // 문제 3: 랜덤 생일 축하 메시지
+    // 난이도 
+    // 요구사항 : 1~12월 중 랜덤한 월을 생성하고, 해당 월이 현재 월과 같으면 특별 메시지를 출력하세요. 
+    // 사용함수 : Math.random(), Date.getMonth(), if
+
+
+    const time = new Date();
+    const hour = time.getHours();
+
+    if ( hour < 12){
+        document.write("좋은 아침!");
+    } else{
+        document.write("좋은 오후!")
+    }
+
+    </script>
+</body>
+</html>

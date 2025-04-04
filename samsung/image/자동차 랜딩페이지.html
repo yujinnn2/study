@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://127.0.0.1:5500/car_landing/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동차 랜딩페이지</title>
+<link rel="stylesheet" href="./자동차 랜딩페이지_files/style.css"></head>
+
+<body data-new-gr-c-s-check-loaded="14.1229.0" data-gr-ext-installed="">
+    <header>
+        <div class="logo">
+            <img src="./자동차 랜딩페이지_files/logo.svg" alt="로고" class="logo">
+        </div>
+        <div class="hbg">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/car_landing/index.html#">최저가 차량</a></li>
+                <li><a href="http://127.0.0.1:5500/car_landing/index.html#">내 차 구매</a></li>
+                <li><a href="http://127.0.0.1:5500/car_landing/index.html#">평생책임 서비스</a></li>
+                <li><a href="http://127.0.0.1:5500/car_landing/index.html#">오시는길</a></li>
+                <li><a href="http://127.0.0.1:5500/car_landing/index.html#">상담문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-top">
+        <div class="container">
+            <div class="content-row">
+               <div class="w-30 title">
+                    <h3 class="top-title">선납금 0원 기준</h3>
+                    <h2 class="top-text"> 
+                        <strong class="title-point">
+                        100만원
+                    </strong> 추가할인</h2>
+                    <p>특가 차량 할인이벤트! 선착순 특가!<br>인기모델 최대 30% 할인 </p>
+               </div>
+               <div class="w-70">
+                <img src="./자동차 랜딩페이지_files/car.svg" alt="자동차 사진" class="car">
+               </div>
+            </div>
+        </div>
+
+        <div class="over">
+            <div class="cli"></div>
+        </div>
+    </section>
+
+    <section class="section02">
+        <div class="section02__title">
+            <h2>왜 신차 장기렌트를 해야할까요?</h2>
+        </div>
+        <div class="container">
+            <div class="wrap d-flex">
+                    <div class="w-25">
+                    <div class="section02__icon">
+                        <img src="./자동차 랜딩페이지_files/icn-money.svg" alt="돈 아이콘">
+                    </div>
+                    <div class="section02_text">
+                        <h3>선납금 0원 기준</h3>
+                        <p>타사 대비 최대<br>200만원 저렴</p>
+                    </div>
+                    </div>
+                    <div class="w-25">
+                    <div class="section02__icon">
+                        <img src="./자동차 랜딩페이지_files/icn-user.svg" alt="돈 아이콘">
+                    </div>
+                    <div class="section02_text">
+                        <h3>고객맞춤형 솔루션</h3>
+                        <p>현재상황에 딱 맞는<br>컨설팅으로 부담 제로!</p>
+                    </div>
+                    </div>
+                    <div class="w-25">
+                        <div class="section02__icon">
+                            <img src="./자동차 랜딩페이지_files/icn-setting.svg" alt="돈 아이콘">
+                        </div>
+                        <div class="section02_text">
+                            <h3>공식 서비스 센터 OPEN</h3>
+                            <p>공임비,소모품 교체,점검까지<br>완벽한 사후관리!</p>
+                        </div>
+                    </div>
+                    <div class="w-25">
+                        <div class="section02__icon">
+                            <img src="./자동차 랜딩페이지_files/icn-youtube.svg" alt="돈 아이콘">
+                        </div>
+                        <div class="section02_text">
+                            <h3>중고차 브랜드 선호도 1위</h3>
+                            <p>유튜브 구독자 20만명이<br>추천하는 중고차!</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let hbg =document.querySelector('.hbg');
+        hbg.onclick = function(){
+            navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

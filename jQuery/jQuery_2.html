@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>.appenTo() 메소드</h1>
+<p>아래 버튼들을 왼쪽에서부터 차례대로 눌러보세요!</p>
+<ul id="list">
+    <li id="firstItem">첫 번째 아이템이요</li>
+    <li id="secondItem">두 번째 아이템이요</li>
+    <li id="thirdItem">세 번째 아이템이요</li>
+</ul>
+<button id="firstBtn"> 첫 번째 아이템 추가 </button>
+<button id="secondBtn"> 두 번째 아이템 추가 </button>
+<button id="thirdBtn"> 세 번째 아이템 추가 </button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+// $(function() {
+//     $("#firstBtn").on("click", function() {
+//         $("#firstItem").appendTo("#list");
+//     });
+//     $("#secondBtn").on("click", function() {
+//         $("#secondItem").appendTo("#list");
+//     });
+//     $("#thirdBtn").on("click", function() {
+//         $("#thirdItem").appendTo("#list");
+//     });
+// });
+
+$(function() {
+    $("#firstBtn").on("click", function() {
+        $("#firstItem").text("바보들!!!");
+    });
+    $("#secondBtn").on("click", function() {
+        $("#secondItem").appendTo("#list");
+    });
+    $("#thirdBtn").on("click", function() {
+        $("#thirdItem").appendTo("#list");
+    });
+});
+
+
+
+// .append() 마지막에 새로운 요소나 콘텐츠를 추가함 
+// .preoend() 선택한 요소의 처음에 새로운 요소나 콘텐츠를 추가함
+// .appendTo() 선택한 요소를 해당 요소의 마지막에 삽입함
+// .prependTo() 선택한 요소를 해당 요소의 처음에 삽입함
+// .html() 해당 요소의 HTML 콘텐츠를 반환하거나 설정함
+// .text() 해당 요소의 텍스트 콘텐츠를 반환하거나 설정함
+// .before() 선택한 요소의 바로 앞에 새로운 요소나 콘텐츠를 추가
+// .after() 선택한 요소의 바로 뒤에 새로운 요소나 콘텐츠 추가
+// .insertBefore() 선택한 요소를 해당 요소의 앞에 삽입
+// .insertAfter() 선택한 요소를 해당 요소의 뒤에 삽입 
+// .wrap() 선택한 요소를 포함하는 새로운 요소 추가
+// .wrapAll() 선택한 모든 요소를 포함하는 새로운 요소를 추가
+// .wrapInner() 선택한 요소에 포함되는 새로운 요소를 추가
+// .clone() 선택한 요소를 복사하여 새로운 요소를 생성함
+// .replaceAll() 선택한 요소를 복사하여 새로운 요소를 생성함
+// .replaceWith() 선택한 모든 요소를 지정된 요소로 대체함
+// .remove() 선택한 요소를 DOM 트리에서 삭제함
+// .detach() 선택한 요소를 DOM 트리에서 삭제함
+// .empty() 선택한 요소의 자식 요소를 모두 삭제함
+
+// 내일 시험(주관식) 볼 예정. 화이팅 문제수 총 10개, 
+// 3개 이상 틀릴 시 1시간남음^^ 내일은 금요일이자나요 저 한가해요. 
+
+</script>
+
+</body>
+</html>

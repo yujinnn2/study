@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/ver-2.css">
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="header">
+              <h2>Mega Menu</h2>
+            </div>
+            <div class="row">
+              <div class="column">
+                <h3>Category 1</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>Category 2</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>Category 3</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Swiper -->
+      <section class="content">
+        <div class="swiper-slide">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide bg1">Slide 1</div>
+                  <div class="swiper-slide bg2">Slide 2</div>
+                  <div class="swiper-slide bg3">Slide 3</div>
+                  <div class="swiper-slide bg4">Slide 4</div>
+                  <div class="swiper-slide bg5">Slide 5</div>
+                  <div class="swiper-slide bg6">Slide 6</div>
+                  <div class="swiper-slide bg7">Slide 7</div>
+                  <div class="swiper-slide bg8">Slide 8</div>
+                  <div class="swiper-slide bg9">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+      </section>
+
+       
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+        // $(function(){
+        //     $(".dropbtn").click(function(){
+        //         $(".dropdown-content").fadeToggle();
+        //     });
+        //     $('na').click(function(){
+        //         $('.text').show();
+        //     })
+        //     $('.ga').click(function(){
+        //         $('.text').hide(6000);
+        //     })
+        //     $('p').click(function(){
+        //         $(this).hide();
+        //     })
+        // });
+
+        // Initialize Swiper
+
+            let swiper = new Swiper(".mySwiper", {});
+
+            // $(".dropbtn").click(function() {
+            //     if ($(".dropdown-content").css('display') ==
+            //     'none') {
+            //         $(".dropdown-content").slideDown()
+            //     } else {
+            //         $(".dropdown-content").slideUp()
+            //     }
+            // })
+
+</script>
+
+
+</body>
+</html>

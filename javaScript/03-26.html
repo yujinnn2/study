@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo">여러분들이 너무 잘해서 좋아요 ;)</p>
+    <script>
+        //let today = new Date();
+        //let hour = today.getHours();
+
+        //if(hour <= 10){
+        //    alert("아침입니다.");
+        //} else  if(hour < 20) {
+        //    alert("오후입니다."); 
+        //}
+        //else {
+        //   alert("잘자요")
+        //}
+
+        // 10시 ~ 12시 50분까지 : 공부하는 시간입니다.
+        // 12시50분이 되면 점심시간, 
+        // 나머지 시간은 잠을 안자고 공부하는 시간입니다. 
+
+        //let today = new Date();
+        //let hour = today.getHours();
+        //let minute = today.getMinutes();
+
+        //if((hours === 10 && minutes >=0) || (hours === 11) || (hours === 12 && minutes <50)){
+        //    alert("지금은 공부하는 시간입니다.")
+        //}else if (hours === 12 && minutes >=50) {
+        //     alert("지금은 점심시간입니다. ")
+        // }else {
+        //     alert("지금은 공부하는 시간입니다.");
+        // }
+
+        // hours === 10 && minutes >= 0 -> 10:00~10:59까지
+        // hours === 11 -> 11시nn분은 다 공부하는 시간 
+        // hour === 12 && minutes >=50 -> ~12:49까지 공부시간 
+
+        // let today = new Date();
+        // let date = today.getDay();
+
+        // if (date === 0) {
+        //     document.write("쉴꺼임");
+        // }else if (date === 1){
+        //     document.write("공부");
+        // }else if (date === 2){
+        //     document.write("밥먹기");
+        // }else if (date === 3){
+        //     document.write("점심먹기");
+        // }else if (date === 4){
+        //     document.write("저녁먹기");
+        // }else if (date === 5){
+        //     document.write("잠자기");
+        // }else {
+        //     document.write("공부하기");
+        // }
+
+
+
+        // if (date == 0) {
+        //     document.write("일요일입니다.");
+        // } else if (date == 1) {
+        //     document.write("월요일입니다.");
+        // } else if (date == 2) {
+        //     document.write("화요일입니다.");
+        // } else if (date == 3) {
+        //     document.write("수요일입니다 일해요.");
+        // } else if (date == 4) {
+        //     document.write("목요일입니다 쉬어요.");
+        // } else if (date == 5) {
+        //     document.write("금요일입니다.");
+        // } else if (date == 6) {
+        //     document.write("토요일입니다.");
+        // }
+
+
+        // const score = Number(prompt("점수입력"));
+        // if(score >= 90){
+        //     document.write("A학점입니다.");
+        // } else if(score >= 80){
+        //     document.write("B학점입니다.");
+        // } else if(score >= 70){
+        //     document.write("C학점입니다.");
+        // } else if(score >= 60){
+        //     document.write("D학점입니다.");
+        // } else{
+        //     document.write("F학점입니다.");
+        // }
+
+
+        // if(ID = "admin" && Password = "1234"){
+        //     document.write("로그인 성공");
+        // }else if(ID = "admin" && Password =)
+
+        // let id = prompt("아이디를 입력하세요.")
+        // let pw = prompt("비밀번호를 입력하세요.")
+
+        // if (id === "admin" && pw ==="1234") {
+        //     alert("로그인 성공!");
+        // } else if (username === "admin"){
+        //     alert("비밀번호가 틀렸습니다!");
+        // } else {
+        //     alert("아이디가 존재하지 않습니다!");
+        // }
+
+        //     문제 6: 나이별 입장 가능 여부
+        // 사용자로부터 나이를 입력받아,
+        // 18세 이상이면 "입장 가능합니다!"
+        // 13세 이상 18세 미만이면 "보호자 동반이 필요합니다!"
+        // 13세 미만이면 "입장할 수 없습니다!"
+        // 라는 메시지를 출력하는 코드를 작성하세요.
+
+
+
+        // :메모: 문제 7: 최댓값 찾기
+        // 사용자로부터 세 개의 숫자를 입력받아,
+        //  그중에서 가장 큰 숫자를 출력하는 코드를 작성하세요.
+
+        //         const num1 = Number(prompt("첫 번째 숫자를 입력하세요:"));
+    // const num2 = Number(prompt("두 번째 숫자를 입력하세요:"));
+    // const num3 = Number(prompt("세 번째 숫자를 입력하세요:"));
+    // let max = num1; // 처음에는 첫 번째 숫자가 가장 크다고 가정
+    // if (num2 > max) {
+    //     max = num2; // num2가 더 크면 max를 num2로 변경
+    // }
+    // if (num3 > max) {
+    //     max = num3; // num3가 더 크면 max를 num3로 변경
+    // }
+    // alert("가장 큰 숫자는 " + max + " 입니다!");
+
+
+
+        // :메모: 문제 8: 가위바위보 게임
+        // 사용자가 "가위", "바위", "보" 중 하나를 입력하면,
+        //  컴퓨터가 랜덤하게 "가위", "바위", "보" 중 하나를 선택하여,
+        // 사용자가 이기면 "당신이 이겼습니다!"
+        // 컴퓨터가 이기면 "컴퓨터가 이겼습니다!"
+        // 비기면 "비겼습니다!"
+        // 라고 출력하는 코드를 작성하세요.
+
+        // :메모: 문제 9: 버스 요금 계산기
+        // 사용자의 나이를 입력받아,
+        // 7세 이하: "무료입니다!"
+        // 8세 이상 18세 이하: "청소년 요금은 500원입니다!"
+        // 19세 이상 64세 이하: "성인 요금은 1000원입니다!"
+        // 65세 이상: "무료입니다!"
+        // 라는 메시지를 출력하는 코드를 작성하세요.
+
+
+        // let age = Number(prompt("나이를 입력하세요."));
+        // if (age >= 65){
+        //     alert("무료입니다!")
+        // }else if ( age >=19){
+        //     alert("성인 요금은 1,000원입니다.")
+        // }else if( age >=8){
+        //     alert("청소년 요금은 500원입니다.")
+        // }else{
+        //     alert("무료입니다!")
+        // }
+
+
+        // :메모: 문제 10: 은행 잔액 확인
+        // 사용자로부터 현재 잔액과 출금할 금액을 입력받아,
+        // 잔액보다 출금할 금액이 크면 "잔액이 부족합니다!"
+        // 출금이 가능하면 "출금이 완료되었습니다!"
+        // 라는 메시지를 출력하는 코드를 작성하세요.
+
+        // let ur_money = Number(prompt("현재 잔액을 입력 ㄱㄱ "))
+        // let bank_money = Number(prompt("출금할 금액을 입력ㄱㄱ "))
+
+        // if (ur_money - bank_money >= 0) {
+        //     alert("잔액은" + ur_money + "입니다.")
+        // } else {
+        //     alert("잔액이 부족합니다!")
+        // }
+        //----------------------------------------------------------
+
+        // const balance = Number(prompt("현재 잔액을 입력하세요:"));
+        // const withdraw = Number(prompt("출금할 금액을 입력하세요:"));
+        // if (withdraw > balance) {
+        //     alert("잔액이 부족합니다!");
+        // } else {
+        //     alert("출금이 완료되었습니다! 남은 잔액: " + (balance - withdraw) + "원");
+        // }
+
+
+        // 문제 1. 홀수 vs 짝수 판별기
+        // 요구사항:
+        // 숫자를 입력받아 홀수인지 짝수인지 출력하세요.
+        // if 문만 사용해야 합니다.
+
+        // const num = prompt("숫자")
+
+        // if(num %2 ===0){
+        //     alert("짝수입니다.")
+        // }else{
+        //     alert("홀수입니다.")
+        // }
+
+
+        // 문제 2. 할인 적용 가격 계산
+        // 요구사항:
+        // 물건 가격(price)과 구매 수량(quantity)을 입력받아 총 금액을 계산하세요.
+        // 수량이 10개 이상이면 10% 할인을 적용하세요.
+
+        // let price = prompt("물건가격 입력 ㄱㄱ")
+        // let quantity = prompt("구매수량 입력 ㄱㄱ") 
+        // let total =price * quantity;
+
+        // if (quantity >= 10){
+        //     total = total*0.9; //10% 할인 
+        // } alert("총 가격은" + total +"입니다.")
+
+        // document.write(`총 금액 : ${total}원`)
+
+
+    let month = 7; // 예시 입력
+    let season;
+    if (month >= 3 && month <= 5) {
+    season = "봄";
+    }
+    if (month >= 6 && month <= 8) {
+    season = "여름";
+    }
+    if (month >= 9 && month <= 11) {
+    season = "가을";
+    }
+    if (month === 12 || month === 1 || month === 2) {
+    season = "겨울";
+    }
+        //let price = 5000; // 단가
+        //let quantity = 15; // 수량
+        //let total = price * quantity;
+        //if (quantity >= 10) {
+       // total = total * 0.9; // 10% 할인
+        //}
+        //document.write(`총 금액 : ${total}원`);
+        //document.write("총 금액 :" + total +"원");
+
+
+        
+
+    </script>
+</body>
+</html>
