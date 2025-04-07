@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/study/swiper/swiper.css">
+
+</head>
+<body>
+    <header>
+        <h1>header</h1>
+        <section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="main__img">
+                            <img src="/study/swiper/images/main-banner01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main__img">
+                            <img src="/study/swiper/images/main-banner02.jpg" alt="">
+                        </div>
+                        <div class="main__text">
+                            <h2>BUILD VALUE<br>for BETTER FUTURE</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </header>
+
+
+
+
+    
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper(".mySwiper", {
+    loop:true,  //무한으로 돌아감 
+    effect:"fade",
+    pagination:{
+        el:".swiper-pagination", //이미지 아래 동그라미 버튼 (앵커)
+    },                           // }, 붙이지 않고 따로 쓰는게 맞음. 
+    navigation: {
+    nextEI : ".swiper-button-next",
+    prevEI : ".swiper-button-prev",
+    el:".swiper-pagination",
+    }
+});
+    
+</script>
+
+
+</body>
+</html>

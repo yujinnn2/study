@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+.main__img{
+    height: 780px;
+}
+.main__img img{
+    height: 780px;
+    width: 100%;
+    object-fit: cover;
+    /* 높이값(?) 고정인듯  */
+}
+
+.swiper-slide{
+    position: relative;
+}
+
+.main__text{
+    color: #fff;
+    position: absolute;
+    top:30%;
+    left: 10%;
+    font-size: 3.2rem;
+    z-index: 999;
+}

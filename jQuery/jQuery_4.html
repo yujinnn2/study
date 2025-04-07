@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>jQuery_4</title>
+</head>
+<body>
+    <button class="btn1">Hide</button>
+
+    <p id="p2">This is a paragraph with little content.</p>
+    <hr>
+
+
+    <p id="p1">jQuery is fun!!</p>
+    <button class="btn2">Click me</button>
+    <hr>
+
+    <p id="text">This is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn3">Show Text</button>
+    <button id="btn4">Show HTML</button>
+
+    <hr>
+
+    <p>Name: <input type="text" id="text1" value="Mickey Mouse"></p>
+
+    <button id="btn5">Show Value</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+    // $(function(){})
+    // $(document).ready(function(){})
+    // $(document).on('click',function(){})
+    $(document).ready(function(){
+        $('.btn1').click(function(){
+            $('p').hide(1000);
+            alert('The paragraph is now hidden');
+        });
+        $('.btn2').click(function(){
+            $('#p1').css('color','red').slideUp(2000).
+            slideDown(2000);
+        });
+        $('#btn3').click(function(){
+            alert("text"+$('#text').text('으이궁'));
+        //DOM (텍스트 변경)
+        $('#btn4').click(function(){
+            alert("html:"+$('#text').html('<h1>hello</h1>'));
+        })
+        $('#btn5').click(function(){
+            alert("Value:"+$('#text1').val());
+            
+        }) 
+        })
+    })
+</script>
+
+
+</body>
+</html>
