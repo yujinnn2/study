@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const names = ['민수','영희','철수','미영'];
+
+        names.forEach((function(yujin){
+            document.write(yujin+"<br>");
+        }))
+
+        const nums = [1,2,3,4,5];
+        nums.forEach((num)=>{
+            document.write(num*2+"<br>");
+        });
+        
+        for(let i =0; i<nums.length; i++){
+            document.write(nums[i]+"<br>");
+        }
+
+        // es5 function(){}
+        // es6 ()=>{}
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion (ver2개)</title>
+    <style>
+        .faq{
+            width: 480px;
+            border-bottom: 1px solid #c4c4c4;
+        }
+        .faq h3{
+            background: #e9e7e7;
+            margin: 0;
+            padding: 7px 15px;
+            border: 1px solid #c4c4c4;
+            border-bottom: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq p{
+            background: #f7f7f7;
+            margin: 0;
+            padding: 10px 15px 20px;
+            border-left: 1px solid #c4c4c4;
+            border-right: 1px solid #c4c4c4;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="faq">
+        <h3>Question One Sample Text</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi quis tempora provident eaque voluptates molestiae eius, omnis dolorum ea repudiandae qui in. Ab consequuntur enim aut ex consectetur doloremque!</p>
+        <h3>Question One Sample Text</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi quis tempora provident eaque voluptates molestiae eius, omnis dolorum ea repudiandae qui in. Ab consequuntur enim aut ex consectetur doloremque!</p>
+        <h3>Question One Sample Text</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi quis tempora provident eaque voluptates molestiae eius, omnis dolorum ea repudiandae qui in. Ab consequuntur enim aut ex consectetur doloremque!</p>
+    </div>
+    
+    <!-- <div class="faq-all">
+        <div class="faq">
+            <h2 class="faq-title faq1">지금 코딩이 좋으신가요? </h2>
+            <div class="faq-body faqBody1">
+                <p>지금 코딩이 너무 재미있습니다. 그렇지만 ... </p>
+            </div>
+        </div>
+        <div class="faq">
+            <h2 class="faq-title faq2">지금 코딩이 좋으신가요? </h2>
+            <div class="faq-body faqBody2">
+                <p>지금 코딩이 너무 재미있습니다. 그렇지만 ... </p>
+            </div>
+        </div>
+        <div class="faq">
+            <h2 class="faq-title faq3">지금 코딩이 좋으신가요? </h2>
+            <div class="faq-body faqBody3">
+                <p>지금 코딩이 너무 재미있습니다. 그렇지만 ... </p>
+            </div>
+        </div>
+        <div class="faq">
+            <h2 class="faq-title faq4">지금 코딩이 좋으신가요? </h2>
+            <div class="faq-body faqBody4">
+                <p>지금 코딩이 너무 재미있습니다. 그렇지만 ... </p>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script>   
+    <script>
+        $(function(){
+            $('.faq1').click(function(){
+                $('.faqBody1').slideToggle();
+            })
+            $('.faq1').click(function(){
+                $('.faqBody1').slideToggle();
+            })
+            $('.faq1').click(function(){
+                $('.faqBody1').slideToggle();
+            })
+        })
+    </script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+
+    <script>
+        $(function(){
+            $('.faq p').hide();
+            $('.faq h3').click(function(){
+                $(this).next('p').slideToggle('slow').siblings('p:visible').slidup('slow');
+            });
+
+        })
+    </script>
+</body>
+</html>
