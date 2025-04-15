@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #display {
+      width: 220px;
+      height: 40px;
+      font-size: 24px;
+      text-align: right;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .button-container {
+      width: 230px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    button {
+      padding: 15px;
+      font-size: 18px;
+    }
+    /* 반응형 안 할때 가로 스크롤 생기면 해결법 .. 사실은 꼼수임 */
+    .red{
+        width: 3000px;
+        height: 5000px;
+        background-color: brown;
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <div class="red"></div>
+    <h2>단계 업! 계산기</h2>
+
+    <input type="text" id="display" readonly>
+
+    <div class="button-container">
+    <!-- 숫자 버튼 -->
+     <button onclick="press('7')">7</button>
+     <button onclick="press('8')">8</button>
+     <button onclick="press('9')">9</button>
+     <button onclick="press('/')">%</button>
+
+     <button onclick="press('4')">4</button>
+     <button onclick="press('5')">5</button>
+     <button onclick="press('6')">6</button>
+     <button onclick="press('*')">x</button>
+
+     <button onclick="press('1')">1</button>
+     <button onclick="press('2')">2</button>
+     <button onclick="press('3')">3</button>
+     <button onclick="press('-')">-</button>
+
+     <button onclick="press('0')">0</button>
+     <button onclick="press('.')">.</button>
+     <button onclick="calculate()">=</button>
+     <button onclick="press('+')">+</button>
+
+     <button onclick="clearDisplay()" style="grid-column:span 4;">초기화</button>
+    </div> 
+    
+    
+    <script>
+
+    let display = document.getElementById('display');
+    // 변수 저장 
+    function press(value) {
+    display.value += value;
+    }
+    // 7 누르면 -> display에 '7'
+
+    function calculate(){
+        try{
+            display.value = eval(display.value);
+        }catch (e) {
+            display.value ='오류!';
+        }
+    }
+
+    function clearDisplay(){
+        display.value = ''; 
+    }
+
+    </script>
+</body>
+</html>

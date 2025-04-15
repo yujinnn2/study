@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="숫자를 입력하세요">
+    <button onclick="doubleNumber()">2배로 만들기</button>
+  
+    <p id="result">결과: </p> 
+    <!-- 
+    <p>버튼을 누르면 에러가 나지만 화면에는 메시지가 보여요</p>
+    <button onclick="runCode()">코드 실행하기</button> -->
+
+    <script>
+    function doubleNumber() {
+      const input = document.getElementById('input').value;
+      const result = document.getElementById('result');
+
+      try {
+        if (input === "") {
+          throw new Error("입력값이 비어 있어요!");
+        }
+        const number = Number(input);
+        if (isNaN(number)) {
+          throw new Error("숫자가 아니에요! 숫자만 입력해주세요.");
+        }
+        const doubled = number * 2;
+        result.innerText = "결과: " + doubled;
+      } catch (error) {
+        result.innerText = "오류: " + error.message;
+      }
+    }
+    </script>
+</body>
+</html>
