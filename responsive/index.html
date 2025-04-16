@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 1320px;
+            margin: auto;
+        }
+        .w-100{
+            width: 100%;
+            background: red;
+        }
+        .w-50{
+            width: 50%;
+            background: yellow;
+        }
+        .w-33{
+            width: 33%;
+            background: skyblue;
+        }
+        .w-25{
+            width: 25%;
+            background: greenyellow;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .gap-20{
+            gap: 0 20px;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+        @media(max-width:1320px){
+            .container{
+                width: 100%;
+            }
+            
+        }
+        @media(max-width:768px){
+            .flex-wrap{
+                flex-wrap: wrap;
+                gap: 0 20px;
+            }
+            .w-25{
+                width: 50%;
+                flex: 1 1 40%;
+            }
+            .w-33{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="w-100">
+            <h1>100%</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex gap-20">
+            <div class="w-50">
+                <h2>w-50</h2>
+            </div>
+            <div class="w-50">
+                <h2>w-50</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex gap-20 wrap">
+            <div class="w-25">
+                <h2>25%</h2>
+            </div>
+            <div class="w-25">
+                <h2>25%</h2>
+            </div>
+            <div class="w-25">
+                <h2>25%</h2>
+            </div>
+            <div class="w-25">
+                <h2>25%</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="d-flex gap-20">
+        <div class="w-33">
+            <h2>33%</h2>
+        </div>
+        <div class="w-33">
+            <h2>33%</h2>
+        </div>
+        <div class="w-33">
+            <h2>33%</h2>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

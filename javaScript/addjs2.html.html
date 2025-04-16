@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>장바구니 계산기</h2>
+    <p>상품가격 : 12000, 25000, 10000</p>
+    <button onclick="carts()">총합 배송비 계산기</button>
+    <div class="result"></div>
+
+    <script>
+        function carts(){
+            const cart=[12000,25000,10000]
+
+            let total = 0;
+
+            for(let i=0; i<cart.length; i++){
+                total += cart[i];
+            }
+            let result = `총 금액: ${total}원<br>`;
+
+            if(total >=50000){
+                result += "배송비가 무료입니다.";
+            } else{
+                result += "배송비 2500원이 추가됩니다.";
+            }
+            document.querySelector('.result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

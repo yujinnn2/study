@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #sec05{
+
+    }
+    .header{
+        display: none;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        left: 0;
+        top: -80px;
+        z-index: 999;
+        transition: background 0.3s;
+    }
+    header.fixed{
+        top: 0;
+    }
+</style>
+<body>
+    <header>
+        <ul>
+            <li><a href="#sec01">sec01</a></li>
+            <li><a href="#sec02">sec02</a></li>
+            <li><a href="#sec03">sec03</a></li>
+            <li><a href="#sec04">sec04</a></li>
+            <li><a href="#sec05">sec05</a></li>
+        </ul>
+    </header>
+    
+    <section id="sec01"></section>
+    <section id="sec02"></section>
+    <section id="sec03"></section>
+    <section id="sec04"></section>
+    <section id="sec05"></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script>
+        // $(window).on('scroll'), function(){
+        //     let scrollTop = $(this).scrollTop();
+        //     if(scrollTop > lastScroll){
+        //         $('header').removeClass('fixed');
+        //     } else{
+        //         $('header').addClass('fixed');
+        //     }
+        //     let lastScroll = scrollTop;
+        // }
+        $(window).scroll(function(){
+            const scrollY = $(this).scrolltop();
+            console.log('현재스크롤:', scrollY);
+
+            if(scrollY > 100){
+                $('header').fadeIn();
+            }else{
+                $('header').fadeOut();
+            }
+        })
+    </script>
+
+</body>
+</html>

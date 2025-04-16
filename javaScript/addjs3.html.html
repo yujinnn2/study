@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>회원 혜택 계산기</h2>
+    <select class="grade">
+        <option value="VIP">VIP</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+    </select>
+    <input type="number" class="amount" placeholder="구매 금액 입력(숫자만)"> <!--인풋은 무조건 문자열로 반환 -->
+    <button onclick="benefits()">혜택확인</button>
+    <div class="result"></div>
+
+    <script>
+        function benefits(){
+            const grade = document.querySelector('.grade').value;
+            const amount = Number(document.querySelector('.amount').value,10); // parentInt:무조건 숫자로 반환 ,10은 10진수 
+            let message = "";
+            // const amount = document.querySelector('.amount').value;
+
+            if(grade === "VIP" && amount >= 100000){
+                message = "20%할인입니다."; 
+            } else if(grade === "Gold" && amount >= 50000){ 
+                message += "10%할인입니다.";
+            } else if(grade === "Silver" && amount >= 30000){
+                message += "1%할인입니다.";
+            } else{
+                message += "아무것도 없음";
+            }   
+            document.querySelector('.result').
+            innerHTML = message;
+        }
+    </script>
+</body>
+</html>

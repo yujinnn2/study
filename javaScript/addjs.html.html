@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jS Ex1</title>
+    <style>
+        li{
+            border-bottom: 1px solid salmon;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>회원목록리스트</h2>
+    <ul class="userList">
+
+    </ul>
+    <button onclick="renderUsers()">회원 목록 불러오기</button> 
+
+    <script>
+        //자바스크립트란?
+        // 웹페이지에 생동감을 넣어주는 동적 프로그램 언어 
+        // 자바스크립트에서 변수는 var, let, const가 있다. 
+        // var은  ESS일때 사용하면서 자주 사용하였지만 현재는 
+        // es6로 let, const를 사용한다. 
+        // let = var 과 같이 재할당이 가능하다.
+        // const는 재할당이 불가능하다. 선언할 때 초기값을 변경할 수 없다. 
+        // 예를 들어 아래와 같다. 
+
+//       let age = 25;
+//        age = 30;
+//        console.log(age); // 30 
+        // const name = "alice";
+        // name = "bob";
+        // console.log(name);
+
+//        const users = ["미영","지선","현수","채은","지우"]; // 배열은 const 사용, 바뀔 일 없기때문 // 지역변수 let , 전역변수 const 
+
+//        for(let i = 0; i<users.length; i++){  // 초기값,조건문,증가값/length는 길이값을 반환.지금은 4.업데이트 되는 배열은 for문 ㄱㄱ  
+            //document.write(users[i]+"<br>")
+
+            // document.write(`${i+1}번째 사용자 : ${users[i]}`) // 백틱버전 // +1하는 이유는 한국은 1부터 시작하기 때문. 
+
+//            document.write(i+1+"번째 사용자"+users[i]); // 위와 동일, but 백틱 사용 안함 
+//        } 
+
+//        const cart = [15000, 30000, 12000, 8900];
+//        let total=0; // 임의 값을 설정 해 줘야 더해주기 가능.  
+//        for(let i=0; i<cart.length; i++){
+//        total += cart[i] // 0 + ? = // +=으로 써야함. +만 쓰면 값 반환x , *사용하고 싶을 경우 let total=1로 지정 
+//        }
+//        document.write(`총 금액 ${total}원`);
+
+
+        const users = ["미영","지선","현수","채은","지우"];
+
+        function renderUsers(){
+            const userList = document.querySelector(".userList");
+
+            for(let i=0; i<users.length; i++){
+                const li = document.createElement("li"); // html 가져오는 방법 * create는 불러올게로 해석 ㄱㄱ /
+                li.textContent = `${i+1}번째 사용자 : ${users[i]}`;
+                userList.appendChild(li);
+                
+            }
+        }
+    </script>
+</body>
+</html>
