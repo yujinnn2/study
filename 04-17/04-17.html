@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/532d910cdfb.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <style>
+        i{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="xi-home" aria-hidden="true"></i>
+            <a href="#">MadWebsite</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Wedding</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Bookings</a></li>
+        </ul>
+        <ul class="navbar__icons">
+        <a href="#" class="navbar__toggleBtn"></a>
+        <i class="xi-bars" aria-hidden="true"></i>
+        </ul>
+    </nav>
+    <script>
+        const toggleBtn = document.querySelector('.navbar__toggleBtn');
+        const menu = document.querySelector('.navbar__menu');
+        const icons = document.querySelector('.navbar__icons');
+
+        toggleBtn.addEventListener('click',()=>{
+            menu.classList.toggle('active');
+//            icons.classList.toggle('active');
+        })
+    </script>
+
+
+
+<!-- https://www.youtube.com/watch?v=X91jsJyZofw -->
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>로그인</h2>
+<input type="text" id="inputID" placeholder="아이디 입력"><br><br>
+<input type="password" id="inputPw" placeholder="비밀번호 입력"> <br><br>
+<button onclick="login()">로그인</button>
+
+<p id="result"></p>
+    <script>
+        let userId = 'admin';
+        let userpw = '1234'; 
+
+        function login(){
+            let inputId = document.querySelector('#inputID').value;
+            let inputPw = document.querySelector('#inputPw').value; 
+         
+            if(inputId === userId && inputPw === userPw){
+                document.querySelector('#result').innerHTNL = "로그인성공!"
+            }else{
+                document.querySelector('#reulst').innerHTML = "로그인실패ㅋ"
+            }
+        }
+
+
+    </script>
+</body>
+</html>

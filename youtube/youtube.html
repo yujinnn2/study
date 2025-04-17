@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .kv{
+            width: 100%;
+            overflow: hidden;
+            height: 830px;
+            position: relative;
+        }
+        .video__bg{
+            position: absolute;
+        }
+        .video__bg video{
+            /* width: 100%; */
+            position: absolute;
+
+        }
+        .kv__video{
+            position: absolute;
+            width: 100vw;
+        }
+        .kv__title{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.3);
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+   <!-- <section class="kv">
+    <div class="video__bg">
+        <video autoplay muted loop controls poster="/Car-landing/assets/images/car-main.png\" class="kv__video">
+            <source src="/study/youtube/나는 반딧불 - 황가람 - 황가람과 동네청년 (720p, h264).mp4">
+        </video>
+       </div>
+       <div class="kv__title">
+        <h2>비디오 제어 하는 방법!</h2>
+       </div>
+   </section> -->
+   <audio src="music.mp3" autoplay muted controls loop>
+    <!-- html 비디오 플러그인으로 controls 조정 가능 -->
+    <source>
+   </audio>
+
+</body>
+</html>

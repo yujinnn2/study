@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>과일 자주 먹는 유진이를 위한(for...of)</h2>
+    <button onclick="show()">과일 꺼내</button>
+    <ul class="fruitList"></ul>
+
+    <h2>출석부</h2>
+    <button onclick="abc()">출석 확인</button>
+    <div class="result"></div>
+
+
+
+    <script>
+        const students = ["아영", "은빈", "혜진", "수아"];
+//        function abc(){
+//            const result = document.querySelector('.result');
+            
+//           for(const aaa of students){
+//                result.innerHTML += aaa + "<br>";
+
+                // let aaa = 
+//            }
+
+//        }
+
+
+    //    function abc(){
+    //        const list = document.querySelector('.result');
+
+    //      list.innerHTML='';
+
+    //        students.forEach(function(aaa){
+    //            const p = document.createElement('p');
+    //             p.textContent = aaa;
+    //             list.appendChild(p);
+    //         })
+    //     }
+
+
+    //     function 
+
+    //     const fruits = ["사과","바나나","딸기","망고","키위","샤머"];
+
+    //     const show = () =>{
+    //         const list = document.querySelector('.fruitList');
+
+    //         for(const fruit of fruits){
+    //         // fruits 배열에서 값을 하나씩 꺼내는 fruit라는 이름을 써 
+    //         // 첫번재 fruit .. .. .. 
+    //         const li = document.createElement('li');
+    //         li.textContent = fruit;
+    //         list.appendChild(li);
+    //         }
+    //     }
+
+
+    const show =() => {
+        //함수부터 만들고 함수에 이름을 지정한다. 
+        const result = document.querySelector('.result');
+        students.forEach(name => {
+            //누구를 반복할꺼야? forEach
+            const p = document.createElement('p');
+            // 반복할 대상에 이름이 뭐야? name
+            // 너 태그 이름은 뭐야? p
+            p.textContent = name;
+            // 너는 어떤 종류의 이름은 뭐야? 
+            result.append(p);
+            // 너는 어떤반이야?     
+            })
+    }
+    </script>
+</body>
+</html>

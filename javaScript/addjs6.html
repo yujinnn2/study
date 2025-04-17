@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>번호로 학생 찾기</h2>
+    <p>몇 번째 학생을 보고 싶나요? (1~5)</p>
+    
+    <input type="number" id="studentNumber" min="1" max="5">
+    <button onclick="findStudent()">찾기</button>
+
+    <ul id="studentList"></ul>
+    <div class="error" id="errorMsg"></div>
+
+    <script>
+        const students = ["미영","지선","아영","은빈","수아"];
+
+        const findStudent = () =>{
+            const input = document.querySelector('#studentNumber');
+            const index = parseInt(input.value)-1; //.value는 에러 방지.. 위해 parseInt는 무조건 문자값으로 반환하기 때문 
+            const list = document.querySelector('#studentList');
+            const errorMsg = document.querySelector('.error');
+
+            list.innerHTML='';
+            errorMsg.innerHTML = '';
+
+            if(isNaN(index) || index<0 || index >= students.length){
+                errorMsg.textContent = '1~5번까지만 입력해주세요'; 
+                return;  // 유효성 검사 
+            }
+            const li = document.createElement('li');
+            li.textContent = `${index+1}번 학생: ${students[index]}`;
+                        // index+1 + "번 학생 : "+students[i]; 
+            list.appendChild(li);
+        }
+    </script>
+</body>
+</html>
