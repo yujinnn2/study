@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{  margin: 0;
+            padding: 0;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .w-70{
+            width: 70%;
+        }
+        .w-30{
+            width: 30%;
+        }
+        ul{
+            list-style: none;
+        }
+        img{
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .tab__container_img{
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .slider-wrapper{
+            display: flex;
+            width: 500%;
+            transition: all 0.5s ease;
+            position: relative;
+            left: 0;
+        }
+        .tab__content_color ul{
+            display: flex;
+        }
+        .tab__content_color li{
+            width: 20%;
+            padding: 40px 30px;
+            cursor: pointer;
+            color:white;
+        }
+        .colorchip-1{
+            background: skyblue;
+        }
+        .colorchip-2{
+            background: brown;
+        }
+        .colorchip-3{
+            background: silver;
+        }
+        .colorchip-4{
+            background: green;
+        }
+        .colorchip-5{
+            background: black;
+        }
+        @media(max-width:768px){
+            .d-flex{
+                flex-direction: column;
+            }
+            .w-70{
+                width: 100%;
+            }
+            .w-30{
+                width: 100%;
+            }
+            .tab__content_color li{
+            padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab__container">
+        <div class="d-flex">
+            <div class="tab__container_img w-70">
+               <div class="slider-wrapper">
+                <div class="tab__img tab-1">
+                    <img src="assets/images/01.png" alt="">
+                </div>
+                <div class="tab__img tab-2">
+                    <img src="assets/images/02.png" alt="">
+                </div>
+                <div class="tab__img tab-3">
+                    <img src="assets/images/03.png" alt="">
+                </div>
+                <div class="tab__img tab-4">
+                    <img src="assets/images/04.png" alt="">
+                </div>
+                <div class="tab__img tab-5">
+                    <img src="assets/images/05.png" alt="">
+                </div>
+               </div>
+            </div>
+            <div class="tab__content_color w-30">
+                <ul>
+                    <li class="colorchip-1 tab-text-1">
+                        <p>블루</p>
+                    </li>
+                    <li class="colorchip-2 tab-text-2">
+                        <p>브라운</p>
+                    </li>
+                    <li class="colorchip-3 tab-text-3">
+                        <p>화이트</p>
+                    </li>
+                    <li class="colorchip-4 tab-text-4">
+                        <p>그린</p>
+                    </li>
+                    <li class="colorchip-5 tab-text-5">
+                        <p>블랙</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script>
+
+        // swiper 
+        $(function(){
+            $('.tab__content_color li').each(function(index){
+                $(this).on('click',function(){
+                    let moveX = index * -70 + '%';
+                    $('.slider-wrapper').css('left', moveX);
+                })
+            })
+        })
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        // fadeOut ver 
+        // $(function(){
+        //     //처음에 모든 이미지를 숨기고, 첫 번재만 보여줌 
+        //     $('.tab__img').hide().eq(0).fadeIn();
+        //     //색상칩(li)를 클릭하면
+        //     $('.tab__content_color li').each(function(index){
+        //         $(this).on('click', function(){
+        //             //모든 이미지 부드럽게 숨김
+        //             $('.tab__img').stop(true,true).fadeOut(500);
+
+        //             //클릭한 인덱스의 이미지 부드럽게 보여줌
+        //             $('.tab__img').eq(index).stop(true, true).fadeIn(300);
+        //         });
+        //     });
+        // })
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        // js ver 
+            window.onload = function(){     // 내가 창을 실행하고 나서 대기 후 실행할꺼야. 
+            let tabs = document.querySelectorAll('.tab__content_color li');
+            let images = document.querySelectorAll('.tab__img');
+            // images['img1','img2','img3']와 같음 즉, 배열로 저장
+            for(let i=0; i<images.length; i++){
+                images[i].style.display = 'none';
+            }
+            images[0].style.display='block';
+
+            for(let i=0; i<tabs.length; i++){
+                (function(index){
+                    tabs[index].onclick = function(){
+                        for(let j=0; j<images.length; j++){
+                            images[j].style.display = 'none';
+                        }
+                        images[index].style.display='block';
+                    }
+                })(i); // 실행 전 대기, 클릭 하면 작동 
+            }
+
+        };
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        // jqeury + js 버전 
+        // $(function(){
+        //     $('.tab__img').hide().eq(0).show();
+        //     $('.tab__content_color li').each(function(index){
+        //         $(this).on('click',function(){
+        //             $('.tab__img').hide();
+        //             $('.tab__img').eq(index).show();
+        //         })
+                
+        //     });
+        // })        
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        // jquery 기본 버전 
+        // $(function(){
+        //     $('.tab__content_color li').click(function(){
+        //         $('.tab__img').hide();
+
+        //         let index = $(this).index(); //index > 번호를 가져오겠다. 
+
+        //         $('.tab__img').eq(index).show(); //eq > 가져오겠다/선택하겠다... 
+        //     })
+        //     $('.tab__img').hide().eq(0).show(); 
+        // })
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        // jqeury 쉬운 버전
+        // $(function(){
+        //     $('.tab-text-1').click(function(){
+        //         $('.tab-1').show();
+        //         $('.tab-2').hide();
+        //         $('.tab-3').hide();
+        //         $('.tab-4').hide();
+        //         $('.tab-5').hide();
+        //     });
+        //     $('.tab-text-2').click(function(){
+        //         $('.tab-1').hide();
+        //         $('.tab-2').show();
+        //         $('.tab-3').hide();
+        //         $('.tab-4').hide();
+        //         $('.tab-5').hide();
+        //     });
+        //     $('.tab-text-3').click(function(){
+        //         $('.tab-1').hide();
+        //         $('.tab-2').hide();
+        //         $('.tab-3').show();
+        //         $('.tab-4').hide();
+        //         $('.tab-5').hide();
+        //     });
+        //     $('.tab-text-4').click(function(){
+        //         $('.tab-1').hide();
+        //         $('.tab-2').hide();
+        //         $('.tab-3').hide();
+        //         $('.tab-4').show();
+        //         $('.tab-5').hide();
+        //     });
+        //     $('.tab-text-5').click(function(){
+        //         $('.tab-1').hide();
+        //         $('.tab-2').hide();
+        //         $('.tab-3').hide();
+        //         $('.tab-4').hide();
+        //         $('.tab-5').show();
+        //     });
+        // })
+    </script>
+</body>
+</html>
